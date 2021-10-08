@@ -1,0 +1,55 @@
+.add-action {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    font-weight: bold;
+  }
+  div{
+    border-radius: 50%;
+    border: 5px solid #3f51b5;
+    width: 28px;
+    padding: 5px;
+    margin: 10px;
+    mat-icon{
+      font-weight: 600;
+      color:#3f51b5;
+    }
+  }
+}
+a {
+  color: black;
+}
+.add_btn{
+  border-radius: 50%;
+  padding: 10px 0px;
+  border: 5px solid;
+}
+.empty_noti{
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+.top_add{
+  button{
+    position: fixed;
+    left: 460px;
+    top: 20px;
+    background-color: white;
+    color: #3f51b5;
+    mat-icon{
+        font-size: 40px;
+        position: absolute;
+        font-weight: bold;
+        top: 0px;
+        left: 0px;
+    }
+  }
+  button:hover{
+    background-color: #ccc;
+  }
+}
+

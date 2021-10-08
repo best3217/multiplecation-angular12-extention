@@ -1,0 +1,22 @@
+<a routerLink="../teacher-login">Back</a>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <img width="200px" height="200px" src="../../assets/images/app_icon_back_tra.png">
+
+<form  [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Name" formControlName="name">
+    <mat-error *ngIf="signupForm.controls['name'].invalid">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Code From Teacher" formControlName="code">
+    <mat-error *ngIf="signupForm.controls['name'].invalid">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Password" type="password" formControlName="password">
+    <mat-error *ngIf="signupForm.controls['password'].invalid">Required</mat-error>
+  </mat-form-field>
+
+  <button class="full-width" mat-flat-button color="primary" [disabled]="!signupForm.valid" type="submit">Create Account</button>
+</form>
+<p fxFlexAlign="end" class="action-p">Already a member?<a routerLink="/student-login">LogIn</a></p>
+</div>

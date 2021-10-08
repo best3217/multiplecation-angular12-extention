@@ -1,0 +1,26 @@
+table {
+  width: 80%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.progress{
+  color: blueviolet;
+}
+th, td {
+  text-align: start;
+  padding-left: 3px;
+}
+.list-title{
+  font-size: 15px;
+}
+.paid{
+  color: #555555;
+  span{
+    color: blue;
+  }
+}
+.secondTd{
+  color: #555555;
+}

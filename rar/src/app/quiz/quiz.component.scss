@@ -1,0 +1,50 @@
+table {
+  margin-top: 10px;
+}
+.actions {
+  margin-top:20px;
+}
+input {
+  outline: none;
+  border: none;
+  text-align: center;
+}
+.done{
+  width: 80%;
+}
+table {
+  margin-top: 30px;
+  width: 80%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: start;
+  padding-left: 3px;
+}
+.answer {
+  text-align: center;
+}
+@font-face {
+  font-family: myFirstFont;
+  src:url("../../assets/font/digital-7.ttf");
+}
+.timer{
+  padding: 9px 37px;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-family: myFirstFont;
+  font-size: 25px;
+}
+.start_btn{
+  padding: 3px 30px;
+  border-radius: 0px;
+}
+canvas{
+  position: absolute;
+  top: 1px;
+  width: 90%;
+  height: 90%;
+}

@@ -1,0 +1,31 @@
+
+<a routerLink="/teacher/student-management">Back</a>
+<!-- <div class="add-action">
+<button mat-mini-fab  aria-label="add student" (click) = "addStudent()">
+  <mat-icon>add</mat-icon>
+</button>
+</div> -->
+<div fxLayout="column" fxLayoutGap="10px" *ngIf="students && students.length">
+<mat-card fxLayout="row"  fxLayoutGap="20px" *ngFor="let student of students">
+  <ngx-avatar borderColor="peru"  class="clickable border" size="50" [src]="getImage(student.image)" ></ngx-avatar>
+  <div fxLayout="column"  fxLayoutGap="10px">
+    <span >Name: {{student.name}}</span>
+    <span >
+      <a *ngIf="is_subscription=='0'" href="#" (click)="buySubscription($event)">Quiz Results</a>
+      <a *ngIf="is_subscription=='1'" href="#" (click)="showStudent($event,student.id)">Quiz Results</a>
+    </span>
+    <span ><a href="#" style="color: #ff008d;" (click)="confirmDelete($event,student.id)">Delete</a></span>
+  </div>
+</mat-card>
+</div>
+<p *ngIf="!(students && students.length)">Can not find any students for this class.Please add students.</p>
+<div class="top_add">
+  <button mat-mini-fab color="primary" (click)="addStudent()"><mat-icon>add</mat-icon></button>
+</div>
+<div class="add-action" *ngIf="!(students && students.length)">
+  <span>Click on</span>
+  <div mat-stroked-button color="primary" class="add_btn" aria-label="add class">
+    <mat-icon>add</mat-icon>
+  </div>
+  <span>to add student</span>
+</div>

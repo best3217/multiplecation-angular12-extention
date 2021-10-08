@@ -1,0 +1,22 @@
+<form  [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+
+  <ngx-avatar [src]="avatar" (click)="upload.click()"></ngx-avatar>
+
+  <input hidden  (change)="onSelect($event)"  #upload type="file">
+
+    <mat-form-field class="full-width" appearance="outline" >
+      <input matInput placeholder="First Name" formControlName="firstName">
+      <mat-error *ngIf="updateForm.controls['firstName'].invalid">Required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <input matInput placeholder="Last Name" formControlName="lastName">
+      <mat-error *ngIf="updateForm.controls['lastName'].invalid">Required</mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline" >
+      <input matInput placeholder="Email" [disabled]="true" [value]="email">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary"  [disabled]="!updateForm.valid" type="submit">Update</button>
+  </form>
+
+

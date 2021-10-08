@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+<img width="200px" height="200px" src="../../assets/images/app_icon_back_tra.png">
+
+
+<span class="title1 space">The App That Keeps track of the learner's</span>
+<span class="title1">multiplication math facts</span>
+
+<div class="actions" fxFlexAlign="end">
+<div fxLayout="row" fxLayoutGap="10px">
+  <p class="u-student">Student</p> <a class="event" routerLink="../student-login">Click here</a>
+</div>
+<div fxLayout="row" fxLayoutGap="10px">
+<p class="u-teacher">Teacher</p> <a class="event" routerLink="../teacher-login">Click here</a>
+</div>
+<div fxLayout="row" class="guest" fxLayoutGap="10px">
+  <p class="u-teacher">Guest</p> <a class="event" (click)="guest_login()">Click here</a>
+  </div>
+</div>
+
+<span class="title2">By Using this app, I hereby agree that I have read</span>
+<span class="title2">and accepted <a class="terms" routerLink="../terms-condition">Terms and conditions</a> and <a class="terms" routerLink="../private-policy">Privacy Policy</a></span>
+
+<span fxFlexAlign="end" class="footer">© Dr. lppolito</span>
+</div>

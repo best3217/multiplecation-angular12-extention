@@ -1,0 +1,26 @@
+<button class="close" mat-fab color="primary" [mat-dialog-close]="false" aria-label="close action">
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <div>
+   Please enter student information
+   <form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width" appearance="outline">
+      <input matInput placeholder="Student Name" formControlName="name">
+      <mat-error *ngIf="addForm.controls['name'].invalid">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+      <input matInput placeholder="Password" type="password" formControlName="password">
+      <mat-error *ngIf="addForm.controls['password'].invalid">Required</mat-error>
+    </mat-form-field>
+
+    <button mat-flat-button class="full-width" color="primary" [disabled]="!addForm.valid"  type="submit">Confirm</button>
+
+  </form>
+
+  </div>
+  </div>
+
+
+

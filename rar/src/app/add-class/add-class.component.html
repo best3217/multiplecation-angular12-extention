@@ -1,0 +1,18 @@
+<button class="close" mat-fab color="primary" [mat-dialog-close]="false" aria-label="close action">
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <div>
+   Please enter your class name
+   <form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+   <mat-form-field class="full-width">
+    <input matInput formControlName="name">
+    <mat-error *ngIf="addForm.controls['name'].invalid">Required</mat-error>
+  </mat-form-field>
+  <button class="full-width" mat-flat-button color="primary" [disabled]="!addForm.valid"  type="submit" >Confirm</button>
+  </form>
+  </div>
+  </div>
+
+
+

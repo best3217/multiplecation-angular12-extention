@@ -1,0 +1,25 @@
+{
+  "name": "Multiplication Quizzes And Monitoring",
+  "version": "1.0",
+  "description": "Mutiplication Quizzes app",
+  "manifest_version": 2,
+  "icons": { 
+    "16": "assets/images/app_icon.png",
+    "48": "assets/images/app_icon.png",
+   "128": "assets/images/app_icon.png" 
+  },
+  
+  "permissions": [
+    "https://teacherippolito.com/multiplication/public/apis/"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com https://www.gstatic.com https://www.googleapis.com https://securetoken.googleapis.com;  object-src 'self'" 
+}
+

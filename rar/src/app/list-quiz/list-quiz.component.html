@@ -1,0 +1,23 @@
+<div fxLayout="column"  fxLayoutAlign="center center" fxLayoutGap="10px">
+  <div fxLayout="column"  fxLayoutAlign="center center" fxLayoutGap="2px">
+  <p class="title3 list-title">Quizzes to complete</p>
+</div>
+  <table>
+    <thead>
+    <tr>
+      <th class="title4">Quiz</th>
+      <th class="progress">Progress</th>
+    </tr>
+  </thead>
+    <tr *ngFor="let q of quizzes">
+      <td class="title4 clickable" *ngIf="q.progress===100" (click)="displayComplete(q)">{{q.name}}</td>
+      <td class="title4 clickable" *ngIf="!(q.progress===100) && !(q.id===10)" (click)="displayQuestions(q)">{{q.name}}</td>
+      <td class="title4 clickable paid" *ngIf="((q.id===10)&&(teacher_subscription==='0')&&!(q.progress===100))||((q.id===10)&&!(student_id))" (click)="displayAlert()">{{q.name}} <span>(paid)</span></td>
+      <td class="title4 clickable" *ngIf="((q.id===10)&&(teacher_subscription==='1')&&!(q.progress===100))" (click)="displayQuestions(q)">{{q.name}}</td>
+      <!-- <td class="title4 clickable" *ngIf="(q.id===10)" (click)="displayComplete(q)">{{q.name}}</td> -->
+      <td *ngIf="!(q.id===10)" [ngClass]="{'title3': !(q.progress && q.progress === 100),'title5': q.progress && q.progress === 100}">{{(q.progress && q.progress === 100) ? 'completed ': 'Not Yet'}}</td>
+      <td *ngIf="(q.id===10)" [ngClass]="{'title3 secondTd': !(q.progress && q.progress === 100),'title5': q.progress && q.progress === 100}">{{(q.progress && q.progress === 100) ? 'completed ': 'Not Yet'}}</td>
+    </tr>
+  </table>
+
+</div>

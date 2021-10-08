@@ -1,0 +1,17 @@
+<div *ngIf="!(is_subscription)">
+    <h1>Manage your subscription</h1>
+    
+    <p>. With subscription, you get access to all student  scores</p>
+    <p>. Track students quizzes.</p>
+    <p>. Able to re-asign quizzes</p>
+    
+    <button mat-flat-button color="primary" type="submit" (click)="openDialog()">Yearly $2.99</button>
+</div>
+<div *ngIf="is_subscription" class="trueSub">
+    <p>You have already subscribed</p>
+    <p>Your subscription will be expire in</p>
+    <div class="date">{{ calendar }} {{ day }}, {{ year }}</div>
+</div>
+
+
+

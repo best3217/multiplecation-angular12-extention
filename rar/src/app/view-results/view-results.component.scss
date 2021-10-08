@@ -1,0 +1,31 @@
+.flex{
+    display:flex
+}
+.padding{
+  padding: 3px;
+}
+table {
+  width: 80%;
+}
+table, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.answer{
+  color: blueviolet;
+  font-weight: bold;
+}
+.text-center{
+  text-align: center;
+}
+td{
+  padding: 3px;
+}
+.reassign{
+    font-size: 21px;
+    color: #ff00a5;
+    text-decoration: underline;
+    padding: 3px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}

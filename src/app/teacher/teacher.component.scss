@@ -1,0 +1,21 @@
+.top_add{
+    background-color: white;
+    color: #3f51b5;
+    mat-icon{
+        font-size: 40px;
+        position: absolute;
+        font-weight: bold;
+        top: 0px;
+        left: 0px;
+    }
+}
+.top_add:hover{
+    background-color: #ccc;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.example-toolbar{
+    justify-content: space-between;
+}

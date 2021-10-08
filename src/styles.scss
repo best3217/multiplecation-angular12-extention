@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+.cdk-global-scrollblock{
+  position:relative !important;
+}
+body {
+margin: 10px;
+font-family: Roboto, "Helvetica Neue", sans-serif;
+width: 500px;
+height: 600px;
+};
+
+.title1{
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.title2{
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 3px;
+}
+.title3{
+  font-size: 12px;
+  font-weight: 700;
+}
+.title4{
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 3px;
+  color:rgb(23, 120, 218);
+}
+.title5{
+  font-size: 12px;
+  font-weight: 700;
+  color:forestgreen;
+}
+
+.full-width{
+  width: 100%;
+}
+.action-p{
+  font-size: 15px;
+  font-weight: 500;
+  a {
+    color: black;
+  }
+}
+.spacer{
+  margin: 20px;
+}
+.clickable{
+  cursor: pointer;
+  }
+
+  .transparent .mat-dialog-container {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.0);
+}
+.cdk-overlay-pane.my-dialog {
+  position: relative!important;
+}
+.close.mat-fab {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  min-width: auto;
+}
+.pd{
+  margin-bottom: 10px ;
+  margin-top: 10px ;
+}
+.t-login-title{
+  padding-left: 5px;
+  font-size: 20px;
+}
+.teacher-container{
+  box-shadow: 1px 1px 7px -3px black;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: white;
+}

@@ -1,0 +1,28 @@
+<a routerLink="/student/list-quiz">Back</a>
+<div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px">
+  <div class="flex">
+    <div class="title1 padding">Quiz:</div>
+    <div class="title1 padding">{{quiz.name}}</div>
+  </div>
+  <div class="flex">
+    <div class="title1 padding">Quiz Duration:</div>
+    <div class="title1 padding">{{quiz.progressTime}} Sec</div>
+  </div>
+  <div class="flex">
+    <div class="title1 padding">Quiz Progress:</div>
+    <div class="title1 padding">{{quiz.progress}} %</div>
+  </div>
+
+  <table>
+    <thead>
+    <tr>
+      <td class="title4">Quiz</td>
+      <td class="answer text-center">Results</td>
+    </tr>
+  </thead>
+  <tr *ngFor="let q of answers">
+    <td class="title4">{{q.data_1}}x{{q.data_2}}</td>
+    <td class="text-center title3">{{q.answare}}</td>
+  </tr>
+  </table>
+  </div>

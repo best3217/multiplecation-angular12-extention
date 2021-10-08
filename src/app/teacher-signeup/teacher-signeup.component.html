@@ -1,0 +1,28 @@
+<a routerLink="/teacher-login">Back</a>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <img width="200px" height="200px" src="../../assets/images/app_icon_back_tra.png">
+
+<form  [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="First Name" formControlName="firstName">
+    <mat-error *ngIf="signupForm.controls['firstName'].invalid">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Last Name" formControlName="lastName">
+    <mat-error *ngIf="signupForm.controls['lastName'].invalid">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Email" formControlName="email">
+    <mat-error *ngIf="signupForm.controls['email'].invalid">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Password" type="password" formControlName="password">
+    <mat-error *ngIf="signupForm.controls['password'].invalid">Required</mat-error>
+  </mat-form-field>
+
+  <button class="full-width" mat-flat-button color="primary" [disabled]="!signupForm.valid"  type="submit">Create Account</button>
+
+</form>
+<p fxFlexAlign="end" class="action-p">Already a member?<a routerLink="/teacher-login">LogIn</a></p>
+</div>
+

@@ -1,0 +1,22 @@
+<a routerLink="../../student-management">Back</a>
+<ng-container *ngFor="let q of quizzes; index as i">
+    <div fxLayout="row"  fxLayoutGap="10px" class="teacher-container m">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+            <img width="50px" height="50px" src="../../assets/images/book_write.png">
+            <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="10px">
+                <div class="event" *ngIf="(q.progress===100)&&q.answerId" (click)="displayResult(q.id,q.answerId)">
+                    <p class="bold">Quiz Name: {{ q.name }}</p>
+                    <p class="bold" style="color: green;">State: Completed</p>
+                    <div>
+                        <p class="bold">Class Progress: {{ q.progress }}%</p>
+                        <p class="bold">Class Duration: {{ q.progressTime}} sec</p>
+                    </div>
+                </div>
+                <div class="event" *ngIf="!(q.progress===100)" (click)="displayMessage()">
+                    <p class="bold">Quiz Name: {{ q.name }}</p>
+                    <p class="bold">State:Not yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

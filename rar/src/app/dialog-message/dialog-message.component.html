@@ -1,0 +1,9 @@
+<button class="close" mat-fab color="primary" [mat-dialog-close]="false" aria-label="close action">
+  <mat-icon>close</mat-icon>
+</button>
+<h1  mat-dialog-title >{{title}}</h1>
+<div class="title2" mat-dialog-content>
+ {{msg}}
+</div>
+<button class="pd full-width"  mat-flat-button color="primary" [mat-dialog-close]="true" >{{confirm ? 'Confirm' : 'Ok'}}</button>
+

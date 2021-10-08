@@ -1,0 +1,17 @@
+<button class="close" mat-fab color="primary" [mat-dialog-close]="false" aria-label="close action">
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+<div>
+ Please enter your registred e-mail addresss
+ <form  [formGroup]="rpForm" (ngSubmit)="onSubmit()">
+ <mat-form-field class="full-width">
+  <input matInput formControlName="email">
+  <mat-error *ngIf="rpForm.controls['email'].invalid">Required</mat-error>
+</mat-form-field>
+<button mat-flat-button class="full-width" color="primary" [disabled]="!rpForm.valid"  type="submit" >Submit</button>
+</form>
+</div>
+</div>
+
+

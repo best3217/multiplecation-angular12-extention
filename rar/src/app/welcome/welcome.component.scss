@@ -1,0 +1,31 @@
+.space {
+  margin-top: 15px;
+}
+.u-student, .u-teacher{
+  font-weight: bold;
+  font-size: 15px;
+}
+.guest{
+  justify-content: flex-end;
+  a{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.event{
+  color:#993555;
+  font-weight: bold;
+  font-size: 15px;
+
+}
+.actions {
+  margin-top: 30px;
+}
+.terms{
+  color: rgb(61, 110, 11);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+}

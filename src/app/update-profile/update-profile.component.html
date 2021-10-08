@@ -1,0 +1,17 @@
+<form fxLayout="column" fxLayoutAlign="center center" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+  <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="20px">
+<div>
+<ngx-avatar borderColor="peru"  class="clickable border" size="100" [src]="avatar" (click)="upload.click()"></ngx-avatar>
+
+<input hidden  (change)="onSelect($event)"  #upload type="file">
+</div>
+  <mat-form-field class="full-width" appearance="outline">
+    <input matInput placeholder="Name" formControlName="name">
+    <mat-error *ngIf="updateForm.controls['name'].invalid">Required</mat-error>
+  </mat-form-field>
+</div>
+
+  <button mat-flat-button color="primary" [disabled]="!updateForm.valid"  type="submit">Update</button>
+</form>
+
+

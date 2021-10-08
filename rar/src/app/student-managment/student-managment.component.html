@@ -1,0 +1,38 @@
+
+  <div *ngIf="state" class="empty_noti">
+    <p>No class found.Please add class and share the class code</p> 
+    <p>with your students.</p>
+  </div>
+  <div *ngIf="!state;">
+    <ng-container *ngFor="let class of classes; index as i">
+      <div fxLayout="row"  fxLayoutGap="10px" class="teacher-container">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+          <img width="30px" height="30px" src="../../assets/images/book_write.png">
+          <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="10px">
+            <a routerLink="../students-class/{{class.id}}/{{class.code}}">
+              <p class="bold">Class Name: {{class.name}}</p>
+              <p class="bold">Class Code: {{class.code}}</p>
+            </a>
+            <p class="edit" (click) ="editClass(class)">Edit</p>
+            <p class="del" (click) ="deleteClass(class.id)">Delete</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="top_add">
+    <button mat-mini-fab color="primary" (click)="addClass()"><mat-icon>add</mat-icon></button>
+  </div>
+  <div class="add-action" *ngIf="state">
+    <span>Click on</span>
+    <div mat-stroked-button color="primary" class="add_btn" aria-label="add class">
+      <mat-icon>add</mat-icon>
+    </div>
+    <span>to add class</span>
+  </div>
+  
+
+
+
+
+

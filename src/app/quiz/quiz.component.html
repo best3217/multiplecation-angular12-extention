@@ -1,0 +1,28 @@
+<a routerLink="/student/list-quiz">Back</a>
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+<p class="title1">Get Ready to Show Your Skills</p>
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+<img width="70px" height="70px" src="../../assets/images/book_write.png">
+<button class="full-widthfull-width" mat-flat-button color="primary" class="start_btn" [attr.aria-disabled]="start" (click)="startQuiz($event)">Start</button>
+<div class="timer">
+  {{ minute }}:{{ second }}
+  <!-- {{currentTime}} -->
+</div>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th class="title4">{{quiz?.name}}</th>
+    <th class="answer">Answer</th>
+  </tr>
+</thead>
+  <tr *ngFor="let q of questions">
+    <td class="title4">{{q.data_1}}x{{q.data_2}}</td>
+    <td class="answer"><input *ngIf="start" type="text" [(ngModel)]="q.answare"></td>
+  </tr>
+</table>
+
+<button class="done" mat-flat-button color="warn" (click)="handlQuiz()" *ngIf="start">Done</button>
+
+</div>
